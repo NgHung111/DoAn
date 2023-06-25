@@ -66,6 +66,20 @@ Route::group(['middleware' => ['checkauth:admin']], function () {
     Route::post('/admin/size/modify-size/id={id}', [ColorController::class, 'modifySize'])->name('xl-sua-doi-kich-thuoc-admin');
     Route::get('/admin/size/delete-size', [ColorController::class, 'deleteSize'])->name('xl-xoa-bo-kich-thuoc-admin');
 
+    Route::get('/admin/new',[NewController::class,'getsnew'])->name('bai-viet-admin');
+    Route::get('/admin/new/add-new',[NewController::class,'Return_tpladm_addnew'])->name('them-moi-bai-viet-admin');
+    Route::post('/admin/new/add-new', [NewController::class, 'addnews'])->name('xl-them-moi-bai-viet-admin');
+    Route::get('/admin/new/modify-new/id={id}',[NewController::class,'Return_tpladm_modifynew'])->name('sua-doi-bai-viet-admin');
+    Route::post('/admin/new/modify-new/id={id}', [NewController::class, 'modifynews'])->name('xl-sua-doi-bai-viet-admin');
+    Route::get('/admin/new/delete-new', [NewController::class, 'deletenews'])->name('xl-xoa-bo-bai-viet-admin');
+
+    Route::get('/admin/newtype',[NewTypeController::class,'getsnewtype'])->name('loai-bai-viet-admin');
+    Route::get('/admin/new/add-newtype',[NewTypeController::class,'Return_tpladm_addnewtype'])->name('them-moi-loai-bai-viet-admin');
+    Route::post('/admin/new/add-newtype', [NewTypeController::class, 'addnewstype'])->name('xl-them-moi-loai-bai-viet-admin');
+    Route::get('/admin/newtype/modify-newtype/id={id}',[NewTypeController::class,'Return_tpladm_modifynewtype'])->name('sua-doi-loai-bai-viet-admin');
+    Route::post('/admin/newtype/modify-newtype/id={id}', [NewTypeController::class, 'modifynewtypes'])->name('xl-sua-doi-loai-bai-viet-admin');
+    Route::get('/admin/newtype/delete-newtype', [NewTypeController::class, 'deletenewtypes'])->name('xl-xoa-bo-loai-bai-viet-admin');
+
     Route::get('/admin/status', [ProductController::class, 'setStatus'])->name('set-trang-thai-sp');
 });
 
