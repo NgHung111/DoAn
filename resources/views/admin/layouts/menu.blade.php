@@ -191,10 +191,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('sanpham-lv1-admin') }}"
-                                class="nav-link {{ $name == 'sanpham-lv1-admin' || $name == 'themmoi-sanpham-lv1-admin' || $name == 'suadoi-sanpham-lv1-admin'
-                                    ? 'active'
-                                    : '' }}">
+                            <a href="{{route('sanpham-lv1-admin')}}" class="nav-link {{($name == 'sanpham-lv1-admin'|| 
+                            $name == 'themmoi-sanpham-lv1-admin' || 
+                            $name == 'suadoi-sanpham-lv1-admin') ? "active" : "" }}">
                                 <i class="nav-icon-small fas fa-circle fa-2xs"></i>
                                 <p>Danh mục thương hiệu</p>
                             </a>
@@ -208,6 +207,25 @@
                                 <p>Danh mục loại</p>
                             </a>
                         </li>
+
+                            <a href="" class="nav-link">
+                                <i class="fa-solid fa-square-caret-right nav-icon"></i>
+                                <p>Thương Hiệu</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fa-solid fa-square-caret-right nav-icon"></i>
+                                <p>Loại Giày</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fa-solid fa-square-caret-right nav-icon"></i>
+                                <p>Giới Tính</p>
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
 

@@ -7,6 +7,16 @@ use Illuminate\Http\Request;
 use App\Models\TableNew;
 use App\Models\TableNewType;
 use Illuminate\Support\Str;
+use App\Http\Requests\xlAddRequestProduct;
+use App\Http\Requests\xlAddRequestDmucLevel;
+use Illuminate\Support\Str;
+use App\Models\TableProduct;
+use App\Models\TableProduct_Level1;
+use App\Models\TableProduct_Level2;
+use App\Models\TableColor;
+use App\Models\TableSize;
+use App\Models\TableVariantsColorProduct;
+use App\Models\TableVariantsSizeProduct;
 use App\Models\TableVariantsNewType;
 use App\Http\Requests\xlAddRequestNew;
 
@@ -18,6 +28,7 @@ class NewController extends Controller
         $limit =  10;
         //latest() = orderBy('created_at','desc')
         $dsNew = TableNew::latest()->paginate($limit);
+
         if ($req->keyword != null) {
             $dsNew = TableNew::where('name', 'like', '%' . $req->keyword. '%')->latest()->paginate($limit);
         }

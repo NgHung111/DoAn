@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReturnTpl;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\NewController;
+use App\Http\Controllers\NewTypeController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\LoginCotroller;
 use Illuminate\Support\Facades\Auth;
@@ -26,7 +28,8 @@ Route::get('/login', [LoginCotroller::class, 'index_login'])->name('dang-nhap-ad
 Route::post('/login', [LoginCotroller::class, 'xlLogin'])->name('xl-dang-nhap-admin');
 Route::get('/logout', [LoginCotroller::class, 'xlLogout'])->name('xl-logout');
 
-Route::group(['middleware' => ['checkauth:admin']], function () {
+Route::get('admin',[ReturnTpl::class,'index_admin'])->name('trang-chu-admin');
+
 
     Route::get('admin', [ReturnTpl::class, 'index_admin'])->name('trang-chu-admin');
     Route::get('/update-info/id={id}', [LoginCotroller::class, 'index_update'])->name('suadoi-thongtin-admin');
@@ -37,6 +40,13 @@ Route::group(['middleware' => ['checkauth:admin']], function () {
     Route::get('/admin/product/modify-product/id={id}', [ProductController::class, 'index_modifypro'])->name('sua-doi-san-pham-admin');
     Route::post('/admin/product/modify-product/id={id}', [ProductController::class, 'modifyproducts'])->name('xl-sua-doi-san-pham-admin');
     Route::get('/admin/product/delete-product', [ProductController::class, 'deleteproducts'])->name('xl-xoa-bo-san-pham-admin');
+
+Route::get('/admin/product',[ProductController::class,'index_product'])->name('san-pham-admin');
+Route::get('/admin/product/add-product',[ProductController::class,'Return_tpladm_addpro'])->name('them-moi-san-pham-admin');
+Route::post('/admin/product/add-product', [ProductController::class, 'index_addpro'])->name('xl-them-moi-san-pham-admin');
+Route::get('/admin/product/modify-product/id={id}',[ProductController::class,'index_modifypro'])->name('sua-doi-san-pham-admin');
+Route::post('/admin/product/modify-product/id={id}', [ProductController::class, 'modifyproducts'])->name('xl-sua-doi-san-pham-admin');
+Route::get('/admin/product/delete-product', [ProductController::class, 'deleteproducts'])->name('xl-xoa-bo-san-pham-admin');
 
     Route::get('/admin/product/brand', [ProductController::class, 'index_brand'])->name('sanpham-lv1-admin');
     Route::get('/admin/product/add-brand', [ProductController::class, 'index_addbrand'])->name('themmoi-sanpham-lv1-admin');
