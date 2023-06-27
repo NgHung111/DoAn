@@ -32,6 +32,7 @@ Route::get('admin',[ReturnTpl::class,'index_admin'])->name('trang-chu-admin');
 
 
     Route::get('admin', [ReturnTpl::class, 'index_admin'])->name('trang-chu-admin');
+    {
     Route::get('/update-info/id={id}', [LoginCotroller::class, 'index_update'])->name('suadoi-thongtin-admin');
     Route::post('/update-info/id={id}', [LoginCotroller::class, 'xl_update_info'])->name('xl-suadoi-thongtin-admin');
     Route::get('/admin/product', [ProductController::class, 'index_product'])->name('san-pham-admin');
@@ -91,7 +92,8 @@ Route::get('/admin/product/delete-product', [ProductController::class, 'deletepr
     Route::get('/admin/newtype/delete-newtype', [NewTypeController::class, 'deletenewtypes'])->name('xl-xoa-bo-loai-bai-viet-admin');
 
     Route::get('/admin/status', [ProductController::class, 'setStatus'])->name('set-trang-thai-sp');
-});
+}
+
 
 
 
