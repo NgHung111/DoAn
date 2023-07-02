@@ -8,17 +8,13 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
-<<<<<<< HEAD
-    'App\\Http\\Controllers\\ArticleCotroller' => $baseDir . '/app/Http/Controllers/ArticleCotroller.php',
-=======
     'App\\Http\\Controllers\\AlbumController' => $baseDir . '/app/Http/Controllers/AlbumController.php',
+    'App\\Http\\Controllers\\ArticleCotroller' => $baseDir . '/app/Http/Controllers/ArticleCotroller.php',
     'App\\Http\\Controllers\\BrandController' => $baseDir . '/app/Http/Controllers/BrandController.php',
->>>>>>> d6c0dae1898759c675bc3afe88216b90a89ec61e
     'App\\Http\\Controllers\\ColorController' => $baseDir . '/app/Http/Controllers/ColorController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\LoginCotroller' => $baseDir . '/app/Http/Controllers/LoginCotroller.php',
     'App\\Http\\Controllers\\NewController' => $baseDir . '/app/Http/Controllers/NewController.php',
-    'App\\Http\\Controllers\\NewTypeController' => $baseDir . '/app/Http/Controllers/NewTypeController.php',
     'App\\Http\\Controllers\\ProductController' => $baseDir . '/app/Http/Controllers/ProductController.php',
     'App\\Http\\Controllers\\ProductTypeController' => $baseDir . '/app/Http/Controllers/ProductTypeController.php',
     'App\\Http\\Controllers\\ReturnTpl' => $baseDir . '/app/Http/Controllers/ReturnTpl.php',
@@ -42,25 +38,8 @@ return array(
     'App\\Http\\Requests\\xlAddRequestProduct' => $baseDir . '/app/Http/Requests/xlAddRequestProduct.php',
     'App\\Http\\Requests\\xlAddRequestSize' => $baseDir . '/app/Http/Requests/xlAddRequestSize.php',
     'App\\Http\\Requests\\xlDangNhapRequest' => $baseDir . '/app/Http/Requests/xlDangNhapRequest.php',
-<<<<<<< HEAD
     'App\\Models\\TableAlbum' => $baseDir . '/app/Models/TableAlbum.php',
     'App\\Models\\TableArticle' => $baseDir . '/app/Models/TableArticle.php',
-=======
-    'App\\Models\\Album' => $baseDir . '/app/Models/Album.php',
-    'App\\Models\\Brand' => $baseDir . '/app/Models/Brand.php',
-    'App\\Models\\Cart' => $baseDir . '/app/Models/Cart.php',
-    'App\\Models\\City' => $baseDir . '/app/Models/City.php',
-    'App\\Models\\District' => $baseDir . '/app/Models/District.php',
-    'App\\Models\\Gender' => $baseDir . '/app/Models/Gender.php',
-    'App\\Models\\News' => $baseDir . '/app/Models/News.php',
-    'App\\Models\\Order' => $baseDir . '/app/Models/Order.php',
-    'App\\Models\\OrderDetail' => $baseDir . '/app/Models/OrderDetail.php',
-    'App\\Models\\OrderType' => $baseDir . '/app/Models/OrderType.php',
-    'App\\Models\\Product' => $baseDir . '/app/Models/Product.php',
-    'App\\Models\\ProductType' => $baseDir . '/app/Models/ProductType.php',
-    'App\\Models\\Review' => $baseDir . '/app/Models/Review.php',
-    'App\\Models\\Role' => $baseDir . '/app/Models/Role.php',
->>>>>>> d6c0dae1898759c675bc3afe88216b90a89ec61e
     'App\\Models\\TableBrand' => $baseDir . '/app/Models/TableBrand.php',
     'App\\Models\\TableColor' => $baseDir . '/app/Models/TableColor.php',
     'App\\Models\\TableNew' => $baseDir . '/app/Models/TableNew.php',
@@ -68,16 +47,10 @@ return array(
     'App\\Models\\TableProduct' => $baseDir . '/app/Models/TableProduct.php',
     'App\\Models\\TableProductType' => $baseDir . '/app/Models/TableProductType.php',
     'App\\Models\\TableSize' => $baseDir . '/app/Models/TableSize.php',
-<<<<<<< HEAD
-    'App\\Models\\TableTypeArticle' => $baseDir . '/app/Models/TableTypeArticle.php',
-=======
->>>>>>> d6c0dae1898759c675bc3afe88216b90a89ec61e
     'App\\Models\\TableUser' => $baseDir . '/app/Models/TableUser.php',
     'App\\Models\\TableVariantsColorProduct' => $baseDir . '/app/Models/TableVariantsColorProduct.php',
     'App\\Models\\TableVariantsSizeProduct' => $baseDir . '/app/Models/TableVariantsSizeProduct.php',
     'App\\Models\\TablevariantsNewType' => $baseDir . '/app/Models/TablevariantsNewType.php',
-    'App\\Models\\User' => $baseDir . '/app/Models/User.php',
-    'App\\Models\\Ward' => $baseDir . '/app/Models/Ward.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

@@ -529,17 +529,13 @@ class ComposerStaticInit585eb8fbe9d07c015a27114c727eae47
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-<<<<<<< HEAD
-        'App\\Http\\Controllers\\ArticleCotroller' => __DIR__ . '/../..' . '/app/Http/Controllers/ArticleCotroller.php',
-=======
         'App\\Http\\Controllers\\AlbumController' => __DIR__ . '/../..' . '/app/Http/Controllers/AlbumController.php',
+        'App\\Http\\Controllers\\ArticleCotroller' => __DIR__ . '/../..' . '/app/Http/Controllers/ArticleCotroller.php',
         'App\\Http\\Controllers\\BrandController' => __DIR__ . '/../..' . '/app/Http/Controllers/BrandController.php',
->>>>>>> d6c0dae1898759c675bc3afe88216b90a89ec61e
         'App\\Http\\Controllers\\ColorController' => __DIR__ . '/../..' . '/app/Http/Controllers/ColorController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\LoginCotroller' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginCotroller.php',
         'App\\Http\\Controllers\\NewController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewController.php',
-        'App\\Http\\Controllers\\NewTypeController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewTypeController.php',
         'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',
         'App\\Http\\Controllers\\ProductTypeController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductTypeController.php',
         'App\\Http\\Controllers\\ReturnTpl' => __DIR__ . '/../..' . '/app/Http/Controllers/ReturnTpl.php',
@@ -563,25 +559,8 @@ class ComposerStaticInit585eb8fbe9d07c015a27114c727eae47
         'App\\Http\\Requests\\xlAddRequestProduct' => __DIR__ . '/../..' . '/app/Http/Requests/xlAddRequestProduct.php',
         'App\\Http\\Requests\\xlAddRequestSize' => __DIR__ . '/../..' . '/app/Http/Requests/xlAddRequestSize.php',
         'App\\Http\\Requests\\xlDangNhapRequest' => __DIR__ . '/../..' . '/app/Http/Requests/xlDangNhapRequest.php',
-<<<<<<< HEAD
         'App\\Models\\TableAlbum' => __DIR__ . '/../..' . '/app/Models/TableAlbum.php',
         'App\\Models\\TableArticle' => __DIR__ . '/../..' . '/app/Models/TableArticle.php',
-=======
-        'App\\Models\\Album' => __DIR__ . '/../..' . '/app/Models/Album.php',
-        'App\\Models\\Brand' => __DIR__ . '/../..' . '/app/Models/Brand.php',
-        'App\\Models\\Cart' => __DIR__ . '/../..' . '/app/Models/Cart.php',
-        'App\\Models\\City' => __DIR__ . '/../..' . '/app/Models/City.php',
-        'App\\Models\\District' => __DIR__ . '/../..' . '/app/Models/District.php',
-        'App\\Models\\Gender' => __DIR__ . '/../..' . '/app/Models/Gender.php',
-        'App\\Models\\News' => __DIR__ . '/../..' . '/app/Models/News.php',
-        'App\\Models\\Order' => __DIR__ . '/../..' . '/app/Models/Order.php',
-        'App\\Models\\OrderDetail' => __DIR__ . '/../..' . '/app/Models/OrderDetail.php',
-        'App\\Models\\OrderType' => __DIR__ . '/../..' . '/app/Models/OrderType.php',
-        'App\\Models\\Product' => __DIR__ . '/../..' . '/app/Models/Product.php',
-        'App\\Models\\ProductType' => __DIR__ . '/../..' . '/app/Models/ProductType.php',
-        'App\\Models\\Review' => __DIR__ . '/../..' . '/app/Models/Review.php',
-        'App\\Models\\Role' => __DIR__ . '/../..' . '/app/Models/Role.php',
->>>>>>> d6c0dae1898759c675bc3afe88216b90a89ec61e
         'App\\Models\\TableBrand' => __DIR__ . '/../..' . '/app/Models/TableBrand.php',
         'App\\Models\\TableColor' => __DIR__ . '/../..' . '/app/Models/TableColor.php',
         'App\\Models\\TableNew' => __DIR__ . '/../..' . '/app/Models/TableNew.php',
@@ -589,16 +568,10 @@ class ComposerStaticInit585eb8fbe9d07c015a27114c727eae47
         'App\\Models\\TableProduct' => __DIR__ . '/../..' . '/app/Models/TableProduct.php',
         'App\\Models\\TableProductType' => __DIR__ . '/../..' . '/app/Models/TableProductType.php',
         'App\\Models\\TableSize' => __DIR__ . '/../..' . '/app/Models/TableSize.php',
-<<<<<<< HEAD
-        'App\\Models\\TableTypeArticle' => __DIR__ . '/../..' . '/app/Models/TableTypeArticle.php',
-=======
->>>>>>> d6c0dae1898759c675bc3afe88216b90a89ec61e
         'App\\Models\\TableUser' => __DIR__ . '/../..' . '/app/Models/TableUser.php',
         'App\\Models\\TableVariantsColorProduct' => __DIR__ . '/../..' . '/app/Models/TableVariantsColorProduct.php',
         'App\\Models\\TableVariantsSizeProduct' => __DIR__ . '/../..' . '/app/Models/TableVariantsSizeProduct.php',
         'App\\Models\\TablevariantsNewType' => __DIR__ . '/../..' . '/app/Models/TablevariantsNewType.php',
-        'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
-        'App\\Models\\Ward' => __DIR__ . '/../..' . '/app/Models/Ward.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
