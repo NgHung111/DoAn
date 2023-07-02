@@ -9,8 +9,6 @@
 <script src="{{ asset('assets/admin/sumoselect/jquery.sumoselect.js') }}"></script>
 <script src="{{ asset('assets/admin/filer/jquery.filer.js') }}"></script>
 
+
 <!-- Theme app -->
 <script src="{{ asset('assets/admin/js/adminlte.js') }}"></script>
-
-
-

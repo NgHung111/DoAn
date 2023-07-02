@@ -1,3 +1,16 @@
+<?php
+    $connect= mysqli_connect("localhost","root","","doantn");
+    if(mysqli_connect_error())
+    {
+        echo "Failed to connect to MySQL:".mysqli_connect_error();
+    }
+    $sql_brands= mysqli_query($connect,"SELECT * FROM brands ORDER BY id  ASC");
+    $sql_genders= mysqli_query($connect,"SELECT * FROM genders ORDER BY id  ASC");
+    $sql_sizes= mysqli_query($connect,"SELECT * FROM sizes ORDER BY id  ASC");
+    $sql_colors= mysqli_query($connect,"SELECT * FROM colors ORDER BY id  ASC");
+    $sql_product_types= mysqli_query($connect,"SELECT * FROM product_types ORDER BY id  ASC");
+    $sql_product=mysqli_query($connect, "SELECT * FROM products");
+?>
 @extends('admin.index')
 @section('body')
     <div class="content-wrapper">
@@ -32,6 +45,7 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            @csrf
                             <div class="form-group-category row">
 
                                 <div class="form-group col-xl-6 col-sm-4">
@@ -86,7 +100,7 @@
                                             <option value="{{$value->id}}" {{$check}}>{{$value->name}}</option>
                                         @endforeach
                                     </select> 
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -96,6 +110,7 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Thông tin sản phẩm</h3>
                                 </div>
+                             
                                 <div class="card-body card-article">
                                     <div class="form-group title">
                                         <label for="name-product">Tên sản phẩm:</label>
@@ -114,13 +129,7 @@
                                             <input type="text" class="form-control text-sm" name="masp" id="code"
                                                 placeholder="Mã sản phẩm" value="{{ $detailSP->code }}">
                                         </div>
-                                        <div class="form-group col-md-3">
-                                            <label class="d-block" for="code-product">Số lượng tồn kho:</label>
-                                            <input type="text" class="form-control check-valid text-sm" name="soluong"
-                                                id="code" placeholder="Số lượng tồn kho" @error('soluong') is-invalid @enderror value="{{$detailSP->quantity}}">
-                                            @error('soluong')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                                        </div>
-                                        <div class="form-group col-md-3">
+                                        <div class="form-group col-md-4">
                                             <label class="d-block" for="regular_price">Giá gốc:</label>
                                             <div class="input-group">
                                                 <input type="text"
@@ -134,7 +143,7 @@
                                         <div class="form-group col-md-3">
                                             <label class="d-block" for="sale_price">Giá mới:</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control format-price sale_price text-sm"
+                                                <input type="text" class="form-control format-price sale_price text-sm" style="width:50%"
                                                     name="giamoi" id="sale_price" placeholder="Giá mới" value="{{$detailSP->sale_price}}">
                                                 <div class="input-group-append">
                                                     <div class="input-group-text"><strong>VNĐ</strong></div>
@@ -146,10 +155,9 @@
                             </div>
                         </div>
                         <div class="col-xl-4">
-                            
                             <div class="card card-primary card-outline text-sm">
                                 <div class="card-header">
-                                    <h3 class="card-title">Hình ảnh sản phẩm</h3>
+                                    <h3 class="card-title">Hình ảnh loại bài viết</h3>
                                 </div>
                                 <div class="card-body">
                                     {{-- Image --}}
@@ -169,27 +177,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="card card-primary card-outline text-sm">
-                        <div class="card-header">
-                            <h3 class="card-title">Album sản phẩm</h3>
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
-                                        class="fas fa-minus"></i></button>
-                            </div>
-                        </div>
-                        <div class="card-body upload__box">
-                            <input type="hidden" name="gallery_table" id="gallery_table" value="gallery">
-                            <div class="form-group">
-                                <label for="filer-gallery" class="label-filer-gallery mb-3">Album hình:
-                                    (.jpg|.png|.jpeg)</label>
-                                <input type="file" name="filenames[]" id="filer-gallery" data-table="gallery"
-                                    multiple="multiple" data-max_length="50">
-                                <input type="hidden" class="col-filer"
-                                    value="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6">
-                            </div>
-                            <div class="upload__img-wrap"></div>
                         </div>
                     </div>
                 </form>
