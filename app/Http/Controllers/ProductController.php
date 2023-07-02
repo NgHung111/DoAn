@@ -423,7 +423,7 @@ class ProductController extends Controller
         }
     }
 
-
+    
 
     // ---------------- ADMIN ---------------- //
 
@@ -444,20 +444,21 @@ class ProductController extends Controller
         return view('.user.product.product', compact('dsProduct'));
     }
 
-    public function GetDetailProduct(Request $req, $id)
-    {
-        $detailProduct = TableProduct::whereRaw('FIND_IN_SET("hienthi", status)')->where('quantity', '>', 0)->where('id', $id)->first();
-        return view('.user.product.detail', ['rowDetail' => $detailProduct]);
-    }
-
-
-
-    public function GetCartTpl()
-    {
-        return view('.user.order.order');
-    }
-
     /* Format money */
-
+    public function formatMoney($price = 0, $unit = 'vnđ', $html = false)
+    {
+        $str = '';
+        if ($price) {
+            $str .= number_format($price, 0, ',', '.');
+            if ($unit != '') {
+                if ($html) {
+                    $str .= '<span>' . $unit . '</span>';
+                } else {
+                    $str .= $unit;
+                }
+            }
+        }
+        return $str;
+    }
     // ---------------- USER ---------------- //    
 }
