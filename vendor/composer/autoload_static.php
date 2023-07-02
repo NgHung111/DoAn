@@ -529,13 +529,10 @@ class ComposerStaticInit585eb8fbe9d07c015a27114c727eae47
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-<<<<<<< HEAD
         'App\\Http\\Controllers\\ArticleCotroller' => __DIR__ . '/../..' . '/app/Http/Controllers/ArticleCotroller.php',
-=======
         'App\\Http\\Controllers\\AlbumController' => __DIR__ . '/../..' . '/app/Http/Controllers/AlbumController.php',
         'App\\Http\\Controllers\\ArticleCotroller' => __DIR__ . '/../..' . '/app/Http/Controllers/ArticleCotroller.php',
         'App\\Http\\Controllers\\BrandController' => __DIR__ . '/../..' . '/app/Http/Controllers/BrandController.php',
->>>>>>> 1abf69ea58bb89dc9b00dced8741ef96e3ec9a69
         'App\\Http\\Controllers\\ColorController' => __DIR__ . '/../..' . '/app/Http/Controllers/ColorController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\LoginCotroller' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginCotroller.php',
